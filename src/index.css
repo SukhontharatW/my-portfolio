@@ -1,0 +1,107 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+
+  /* transition: all 0.3s; */
+}
+
+html {
+  /* font-size: 62.5%; */
+  scroll-behavior: smooth;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+@layer components {
+  /* ============================================== */
+  /* heading */
+  /* ============================================== */
+  /* h1 */
+  .heading-primary {
+    @apply text-4xl font-semibold text-blue-50 md:text-5xl;
+  }
+  /* h2 */
+  .heading-primary-sub {
+    @apply text-2xl font-semibold text-blue-50 md:text-3xl;
+  }
+  /* h3 */
+  .heading-secondary {
+    @apply text-4xl font-bold uppercase text-blue-900;
+  }
+  .heading-secondary-bright {
+    @apply text-4xl font-bold uppercase text-blue-50;
+  }
+  /* h4 */
+  .heading-tertiary {
+    @apply text-3xl font-semibold text-blue-950;
+  }
+  /* h5 */
+  .heading-xl {
+    @apply text-xl font-semibold text-blue-50;
+  }
+
+  /* ============================================== */
+  /* p */
+  /* ============================================== */
+  .paragraph-base {
+    @apply text-base text-blue-950;
+  }
+  .paragraph-base-bright {
+    @apply text-base text-blue-50;
+  }
+  .paragraph-small {
+    @apply text-sm text-blue-950;
+  }
+  .paragraph-small-bright {
+    @apply text-sm text-blue-50;
+  }
+  .paragraph-tag {
+    @apply text-sm font-semibold uppercase text-blue-900;
+  }
+
+  /* ============================================== */
+  /* button */
+  /* text-sm or text-lg */
+  /* ============================================== */
+  .btn-primary {
+    @apply inline-block cursor-pointer rounded-xl border-4 bg-orange-400 px-6 py-2 font-semibold uppercase text-white transition-all hover:bg-orange-500 hover:transition-all s:px-10;
+  }
+  .btn-secondary {
+    @apply inline-block cursor-pointer rounded-xl border-4 bg-teal-500 px-6 py-2 font-semibold uppercase text-white transition-all hover:bg-teal-600 hover:transition-all s:px-10;
+  }
+}
+
+/**********************************/
+/* BELOW 1200px (Landscape Tablets) */
+/**********************************/
+@media (max-width: 75em) {
+  html {
+    font-size: 90%;
+  }
+}
+/**********************************/
+/* BELOW 944px (Tablets) */
+/**********************************/
+@media (max-width: 59em) {
+  html {
+    font-size: 80%;
+  }
+}
+
+/**********************************/
+/* BELOW 704px (Smaller tablets) */
+/**********************************/
+@media (max-width: 44em) {
+  html {
+    font-size: 70%;
+  }
+}
